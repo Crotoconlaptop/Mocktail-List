@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>St Regis Bar</title>
+    
+</head>
+<body>
+
+    <header>
+        <img src="via.jpg" alt="Imagen Izquierda" class="header-img left-img">
+        <h1>St Regis Bar</h1>
+        <img src="regis.png" alt="Imagen Derecha" class="header-img right-img">
+    </header>
+    
+
+    <section>
+        <h1>Mocktail List</h1>
+        <ul id="cocktail-list">
+            <li onclick="showCocktailDetails('Golden-Sands')">Golden Sands</li>
+            <li onclick="showCocktailDetails('And-All-That-Jazz')">And All That Jazz</li>
+            <li onclick="showCocktailDetails('IV')">IV</li>
+            <li onclick="showCocktailDetails('Just-In-Thyme')">Just In Thyme</li>
+            <li onclick="showCocktailDetails('Fifth-Avenue')">Fifth Avenue</li>
+            <li onclick="showCocktailDetails('Royal-Riyadh')">Royal Riyadh</li>
+            <li onclick="showCocktailDetails('VIA')">VIA</li>
+            <li onclick="showCocktailDetails('Oud-Elixir')">Oud Elixir</li>
+            <li onclick="showCocktailDetails('The-Regal-Mary')">The Regal Mary</li>
+            <li onclick="showCocktailDetails('Lady-Astor')">Lady Astor</li>
+            <li onclick="showCocktailDetails('Red-Snapper')">Red Snapper</li>
+            <!-- Agrega más cocteles según sea necesario -->
+        </ul>
+
+        <div id="Golden-Sands-details" class="cocktail-details">
+            <h2>Golden Sands</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Dark Cane (Lyres)  50ML</li>
+                <li>Strawberry & Basil Cordial  25ML</li>
+                <li>Lemon  25ML</li>
+                <li>Mango & Mango Foam  Top</li>
+            </ul>
+            <p>Glass:  Low Ball</p>
+            <p>Garnish:  Coffee Powder Line</p>
+            <p>Method:  Shake</p>
+            <p>Preparation:</p>
+            <p>Shake all ingredients and double strain and top with the mango foam</p>
+        </div>
+
+        <div id="And-All-That-Jazz-details" class="cocktail-details">
+            <h2>And All That Jazz</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Sage & Basil Cordial  35ML</li>
+                <li>Saline Solution  2 Dash</li>
+                <li>Orange Blossom Water  4 Dash</li>
+                <li>Lemon Juice  15ML</li>
+                <li>Sparkling 0% Alcohol (use Bella Gold)  Top</li>
+            </ul>
+            <p>Glass:  Wine Glass</p>
+            <p>Garnish:  Yellow Jelly Ball</p>
+            <p>Method:  Build</p>
+            <p>Preparation:</p>
+            <p>Build and stir direct into the glass.</p>
+            <br />
+            <p>Comments:</p>
+            <p>Saline Solution: 80ML of water-20g salt</p>
+        </div>
+
+        <div id="IV-details" class="cocktail-details">
+            <h2>IV</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Amaretti (Lyres)  60ML</li>
+                <li>Orange Juice  40ML</li>
+                <li>Vainilla-Yuzu  35ML</li>
+                <li>Foamee  5ML</li>
+            </ul>
+            <p>Glass:  Retro Martini</p>
+            <p>Garnish:  4 Bitters</p>
+            <p>Method:  Dry Shake & Stain</p>
+            <p>Preparation:</p>
+            <p>Shake all the ingredients without ice (dry shake) then strain direct to the glass.</p>
+
+        </div>
+
+        <div id="Just-In-Thyme-details" class="cocktail-details">
+            <h2>Just In Thyme</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Peach Thyme Cordial  60ML</li>
+                <li>Lemon Juice  25ML</li>
+                <li>Pineapple Juice  80ML</li>
+                <li>Limoncello (use Lime-Sherbit Syrup)  30ML</li>
+                <li>American Malt (Lyres)  10ML</li>
+                <li>Fresh Thyme  3 pcs.</li>
+            </ul>
+            <p>Glass:  Rock Glass</p>
+            <p>Garnish:  Fresh Thyme & Grilled Pineapple</p>
+            <p>Method:  Muddle, Shake & Stain</p>
+            <p>Preparation:</p>
+            <p>Muddle the fresh thyme to get the flavor then put all the ingredients
+                then shake and strain.
+            </p>
+
+        </div>
+
+        <div id="Fifth-Avenue-details" class="cocktail-details">
+            <h2>Fifth Avenue</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Amaretti (Lyres)  80ML</li>
+                <li>Lemon Juice  30ML</li>
+                <li>Coffee Cordial  30ML</li>
+                
+            </ul>
+            <p>Glass:  Coupe</p>
+            <p>Garnish:  Lemon Zest</p>
+            <p>Method:  Shake</p>
+            <p>Preparation:</p>
+            <p>Put all the ingredients to the shaker then shake and strain.</p>
+
+        </div>
+
+        <div id="Royal-Riyadh-details" class="cocktail-details">
+            <h2>Royal Riyadh</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Raspberry Sage Cordial  15ML</li>
+                <li>Strawberry & Basil Cordial  25ML</li>
+                <li>Lime Juice  25ML</li>
+                <li>Vanilla Syroup  10ML</li>
+                <li>Ginger Ale  Top</li>
+                
+            </ul>
+            <p>Glass:  Diamond Coupe</p>
+            <p>Garnish:  Raspberry, Strawberry, Sancor Basil</p>
+            <p>Method:  Shake & Double strain</p>
+            <p>Preparation:</p>
+            <p>Put all the ingredients to the shaker then shake and double strain.</p>
+
+        </div>
+
+        <div id="VIA-details" class="cocktail-details">
+            <h2>VIA</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Nectarine Lyres Gin  *60ML*<br />
+                (use Gin Lyres  30ML<br />
+                Peach Monin Cordial  30ML)</li>
+                <li>Pineapple Juice  80ML</li>
+                <li>Yuzu-Vanilla Mix  30ML</li>
+                <li>Champagne (use Bella Gold)  Top</li>
+                
+            </ul>
+            <p>Glass:  Champagne Flute</p>
+            <p>Garnish:  Fake Orange</p>
+            <p>Method:  Wet & Dry Shake & Strain</p>
+            <p>Preparation:</p>
+            <p>Dry Shake all the ingredients then shake again with ice and strain and 
+                top the champagne direct into the glass.
+            </p>
+
+        </div>
+
+        <div id="Oud-Elixir-details" class="cocktail-details">
+            <h2>Oud Elixir</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Fresh Peach Blend  60ML</li>
+                <li>Cardamom & Dates Puree  60ML</li>
+                <li>Lime Juice  25ML</li>
+                <li>Balsamic Raspberry Shrub  20ML</li>
+                
+            </ul>
+            <p>Glass:  Gold Mug</p>
+            <p>Garnish:  Banana Leaf, Raspberry</p>
+            <p>Method:  Shake & Strain</p>
+            <p>Preparation:</p>
+            <p>Put all the ingredients to the shaker then shake and double strain.</p>
+
+        </div>
+
+        <div id="The-Regal-Mary-details" class="cocktail-details">
+            <h2>The Regal Mary</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Tomato Juice  160ML</li>
+                <li>Riyadh Bloody Mix  30ML</li>
+                <li>Dates reduction  10ML</li>
+                <li>Cloves & Cardamom reduction  10ML</li>
+                <li>Himalayan Salt  Pinch</li>
+                <li>Ground Black Pepper  Top</li>
+                
+            </ul>
+            <p>Glass:  High Ball</p>
+            <p>Garnish:  Kefir Lime, Cherry tomato & Rim of Sumac powder</p>
+            <p>Method:  Shake & Strain</p>
+            <p>Preparation:</p>
+            <p>Put all the ingredients to the shaker then shake and strain.</p>
+            <br />
+            <p>Comments:</p>
+            <p>Riyadh Bloody Mix:</p>
+            <ul>
+                <li>180ML Worchester sauce</li>
+                <li>30ML Tabasco</li>
+                <li>20gr Horseradish paste</li>
+                <li>20gr Majorane</li>
+                <li>5gr Fenugreek powder</li>
+                <li>2gr Cumin</li>
+                <li>1 teaspoon of Tumeric powder</li>
+            </ul>
+            <p>Blend all ingredients together and then fine strain.</p>
+            <br />
+            <p>Coriander & Clove Reduction:</p>
+            <ul>
+                <li>125ML sugar</li>
+                <li>250ML water</li>
+                <li>15gr coriander</li>
+                <li>6gr cloves</li>
+            </ul>
+            <p>Sous vide all ingredients for 1.5 hours al 60 degrees.<br />
+            Strain, then let the reduction cool before use.</p>
+            <br />
+            <p>Date Reduction:</p>
+            <ul>
+                <li>10 pcs of seedless dates</li>
+                <li>200ML of water</li>
+            </ul>
+            <p>Sous vide all ingredients for 1 hour at 60 degrees.
+                <br />
+                Once cooked, blend the contents, and let the reduction cool.
+            </p>
+
+
+        </div>
+
+        <div id="Lady-Astor-details" class="cocktail-details">
+            <h2>Lady Astor</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>White Grapes 0% alcohol wine<br />
+                    (use Bella White)  50ML</li>
+                <li>Cranberry Syrup Monin  10ML</li>
+                <li>White Peach Syrup Monin  10ML</li>
+                <li>Cloves & Cardamom reduction  10ML</li>
+                <li>Lemon Juice  25ML</li>
+                
+            </ul>
+            <p>Glass:  Wine Glass</p>
+            <p>Garnish:  Pieces of fruits as a sangria inside</p>
+            <p>Method:  Build</p>
+            <p>Preparation:</p>
+            <p>Put all the ingredients direct into the glass, all ingredients should be chilled.</p>
+
+        </div>
+
+        <div id="Red-Snapper-details" class="cocktail-details">
+            <h2>Red Snapper</h2>
+            <img src="cockta.jpg" alt="coctel">
+            <p>Ingredients:</p>
+            <ul>
+                <li>Tomato Juice  150ML</li>
+                <li>Worcestershire sauce  10ML</li>
+                <li>Lemon Juice  15ML</li>
+                <li>Tabasco sauce  3 drops</li>
+                <li>Ground Black Pepper  Pinch</li>
+                <li>Salt  Pinch</li>
+                <li>Celery Juice  10ML</li>
+                
+            </ul>
+            <p>Glass:  High Ball</p>
+            <p>Garnish:  Celery stick, Lemon Wedge & Rim of Rock Salt</p>
+            <p>Method:  Shake & Strain</p>
+            <p>Preparation:</p>
+            <p>Put all ingredients to the shaker then shake and double starin.</p>
+
+        </div>
+
+        <!-- Agrega más detalles de cocteles según sea necesario -->
+
+    </section>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
