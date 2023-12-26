@@ -7,22 +7,20 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #333;
-    color: #fff;
-
+    background-color: #222; /* Fondo más oscuro */
+    color: #ddd; /* Texto más claro */
 }
 
 img {
     border-radius: 60px;
     object-fit: cover;
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    width: 100%;
+    height: 100%;
 }
 
-
 header {
-    background-color: black;
-    color: #cca86a;
+    background-color: #333; /* Gris oscuro en lugar de naranja */
+    color: #99CC99; /* Verde más claro */
     text-align: center;
     padding: 15px;
     width: 100%;
@@ -30,25 +28,24 @@ header {
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .header-img {
-    width: 50px; /* Ajusta el ancho según tus necesidades */
-    height: 100%; /* Ocupa todo el alto del header */
-    object-fit: cover; /* Ajusta el contenido para cubrir el contenedor */
-    border-radius: 20px; /* Hace que las imágenes sean círculos */
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .left-img, .right-img {
-    margin: 0 15px; /* Ajusta el margen según tus necesidades */
+    margin: 0 15px;
 }
-
 
 section {
     padding: 90px 20px 20px;
     text-align: center;
-    margin-top: 60px; /* Agrega un margen superior igual o mayor a la altura del header */
+    margin-top: 60px;
 }
 
 ul {
@@ -69,9 +66,8 @@ li {
     text-align: center;
 }
 
-
 .copyright {
-    color: gray;
+    color: #555; /* Gris más oscuro */
     width: 100%;
     text-align: center;
     padding: 25px 0;
@@ -80,6 +76,8 @@ li {
     margin-top: 30px;
     bottom: 0;
 }
+
+
 
 
 
