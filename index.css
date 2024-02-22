@@ -1,84 +1,148 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #222; /* Fondo más oscuro */
-    color: #ddd; /* Texto más claro */
-}
-
-img {
-    border-radius: 60px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    max-width: 300px;
+    background-color: #222;
+    color: #ddd;
 }
 
 header {
-    background-color: #333; /* Gris oscuro en lugar de naranja */
-    color: #99CC99; /* Verde más claro */
+    background-color: #333;
+    color: #99CC99;
     text-align: center;
     padding: 15px;
     width: 100%;
-    position: fixed;
+    position: fixed; /* Fijar el header en la parte superior */
     top: 0;
+    z-index: 999;
+}
+
+h1 {
+    margin: 0;
+    color: white; /* Cambiar el color del texto a blanco */
+}
+
+/* Estilos para el navbar */
+.app-navbar {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #333;
+    position: fixed; /* Fijar el navbar en la parte inferior */
+    bottom: 0;
+    left: 0; /* Asegurar que el navbar comience desde el borde izquierdo */
+    right: 0; /* Asegurar que el navbar termine en el borde derecho */
+    z-index: 999;
 }
 
-.header-img {
-    width: 50px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+.app-navbar a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    flex-grow: 1; /* Distribuir el espacio disponible de manera equitativa */
+    text-align: center; /* Centrar el texto en dispositivos móviles */
 }
 
-.left-img, .right-img {
-    margin: 0 15px;
+.app-navbar a:hover {
+    color: #99CC99; /* Cambio de color al pasar el ratón */
 }
 
-section {
-    padding: 90px 20px 20px;
-    text-align: center;
-    margin-top: 60px;
-}
-
+/* Estilos para el contenido de la lista de cócteles */
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Centrar el contenido de la lista */
 }
 
 li {
     cursor: pointer;
     margin-bottom: 10px;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    color: #99CC99; /* Cambio de color al pasar el ratón */
 }
 
 .cocktail-details {
     display: none;
-    margin-top: 10px;
+    margin-top: 20px; /* Aumento del espacio entre los detalles de los cócteles */
     text-align: center;
 }
 
-.copyright {
-    color: #555; /* Gris más oscuro */
-    width: 100%;
+.cocktail-details img {
+    border-radius: 10px; /* Reducción del radio del borde */
+    max-width: 100%; /* Asegura que la imagen no supere el ancho del contenedor */
+    height: auto; /* Ajuste automático de la altura */
+}
+
+section {
+    padding-top: 110px; /* Ajustar el espacio para el contenido debajo del header y navbar */
+    padding-bottom: 60px; /* Ajustar el espacio para el contenido encima del footer */
+}
+
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 25px 0;
-    font-weight: 300;
-    font-size: 10px;
-    margin-top: 30px;
+    padding: 1em;
+    width: 100%;
+    position: fixed; /* Fijar el footer en la parte inferior */
     bottom: 0;
 }
 
+img {
+    width: 400px;
+}
 
 
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem; /* Reducción del tamaño de fuente del encabezado en dispositivos móviles */
+    }
+    
+    .cocktail-details {
+        margin-top: 80px; /* Reducción del espacio superior en dispositivos móviles */
+    }
 
+    /* Ajustes para el navbar en dispositivos móviles */
+    .app-navbar {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
+        justify-content: space-around; /* Espacio uniforme entre los elementos */
+        width: 100%;
+        background-color: #333;
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+    }
+    
+    .app-navbar a {
+        margin: 0.5em; /* Espacio alrededor de cada elemento */
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        width: 100%; /* Ocupar todo el ancho disponible */
+        text-align: center; /* Centrar el texto */
+    }
 
+    section {
+        padding-top: 110px; /* Ajustar el espacio para el contenido debajo del navbar */
+        padding-bottom: 160px; /* Ajustar el espacio para el contenido encima del footer */
+        margin-bottom: 110px; /* Ajustar margen inferior para dispositivos móviles */
+    }
+    .cocktail-details {
+        margin-top: 80px; /* Ajustar el espacio para los detalles del cóctel debajo del navbar */
+    }
+
+    img {
+        width: 300px;
+    }
+}

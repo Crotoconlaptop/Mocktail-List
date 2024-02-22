@@ -8,4 +8,4 @@ function showCocktailDetails(cocktailName) {
     // Muestra los detalles del coctel seleccionado
     var selectedCocktail = document.getElementById(cocktailName + '-details');
     selectedCocktail.style.display = 'block';
-}
+} 
