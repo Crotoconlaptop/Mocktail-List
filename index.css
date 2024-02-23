@@ -100,6 +100,12 @@ img {
     width: 400px;
 }
 
+section.imagenes {
+    display: flex;
+    justify-content: center;
+
+}
+
 
 /* Ajustes para dispositivos móviles */
 @media screen and (max-width: 768px) {
@@ -134,9 +140,16 @@ img {
     }
 
     section {
-        padding-top: 110px; /* Ajustar el espacio para el contenido debajo del navbar */
-        padding-bottom: 160px; /* Ajustar el espacio para el contenido encima del footer */
-        margin-bottom: 110px; /* Ajustar margen inferior para dispositivos móviles */
+        padding-top: 80px; /* Ajustar el espacio para el contenido debajo del navbar */
+        padding-bottom: 50px; /* Ajustar el espacio para el contenido encima del footer */
+        margin-bottom: 50px; /* Ajustar margen inferior para dispositivos móviles */
+        position: relative; /* Establece el posicionamiento relativo para que los elementos absolutamente posicionados estén relativos a él */
+        display: block; /* Cambia el display a bloque para que las imágenes se muestren una encima de la otra */
+    
+    }
+    section.imagenes {
+        flex-direction: column; /* Coloca las imágenes una encima de la otra en dispositivos móviles */
+        align-items: center; /* Centra las imágenes verticalmente en dispositivos móviles */
     }
     .cocktail-details {
         margin-top: 80px; /* Ajustar el espacio para los detalles del cóctel debajo del navbar */
@@ -144,5 +157,12 @@ img {
 
     img {
         width: 300px;
+    }
+
+    img.pdf {
+        width: 100%; /* Establece el ancho al 100% para que las imágenes ocupen todo el ancho del contenedor */
+        height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+        max-width: none; /* Elimina el límite máximo de ancho */
+        margin-bottom: 10px; /* Añade un espacio entre las imágenes */
     }
 }

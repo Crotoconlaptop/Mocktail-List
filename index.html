@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <!-- Scripts de PDF.js alojados en los servidores de Mozilla -->
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.worker.js"></script>
-    <link href="https://mozilla.github.io/pdf.js/web/viewer.css" rel="stylesheet">
-
     <title>Mocktails List</title>
     
 </head>
@@ -367,11 +362,11 @@
         <!-- Agrega más detalles de cocteles según sea necesario -->
 
     </section>
-    <section>
-        <div id="pdf-viewer">
-            <embed src="Drinks standars.pdf" type="application/pdf" width="100%" height="600px" />
-        </div>
-        
+    <section class="imagenes">
+
+       <img class="pdf" src="1.png" alt="pdf"> 
+       <img class="pdf" src="2.png" alt="pdf"> 
+       <img class="pdf" src="3.png" alt="pdf"> 
     </section>
     <footer>
         <nav class="app-navbar">
@@ -386,43 +381,5 @@
 
     
     <script src="index.js"></script>
-    <script>
-         // URL de tu archivo PDF
-    var pdfUrl = 'Drinks standars.pdf';
-
-    // Función para cargar el PDF
-    function renderPDF(url, canvasContainer) {
-        // Cargar el PDF
-        pdfjsLib.getDocument(url).promise.then(function(pdf) {
-            // Recorrer cada página del PDF
-            for (var pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-                // Agregar un lienzo para mostrar cada página
-                pdf.getPage(pageNumber).then(function(page) {
-                    var scale = 1.5;
-                    var viewport = page.getViewport({ scale: scale });
-
-                    // Crear un lienzo HTML para mostrar la página
-                    var canvas = document.createElement('canvas');
-                    var context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-
-                    // Renderizar la página en el lienzo
-                    var renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext).promise.then(function() {
-                        canvasContainer.appendChild(canvas); // Agregar el lienzo al contenedor
-                    });
-                });
-            }
-        });
-    }
-
-    // Llamar a la función para cargar el PDF
-    renderPDF(pdfUrl, document.getElementById('pdf-viewer'));
-    </script>
-
 </body>
 </html>
