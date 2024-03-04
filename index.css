@@ -1,168 +1,451 @@
-/* Estilos generales */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #222;
-    color: #ddd;
+  background: #080808;
+  color: #fff;
 }
 
-header {
-    background-color: #333;
-    color: #99CC99;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-    position: fixed; /* Fijar el header en la parte superior */
+#header {
+  width: 100%;
+  height: 100vh;
+  background: url(images/compu6.jpeg) right no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  transition: background 0.5s;
+}
+
+#header:hover {
+  background: url(images/compu6_glitch1.jpg) right no-repeat; /* Cambia la imagen a la versión con el efecto de color */
+  background-size: contain;
+}
+
+.container {
+  padding: 10px 10%;
+}
+ 
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.logo {
+  width: 140px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span {
+  color: #ff004f;
+}
+
+/*about*/
+.text-con-fondo-oscuro {
+  width: 45%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+  color: white; /* Color del texto */
+  padding: 10px; /* Espaciado alrededor del texto para mayor claridad */
+}
+
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 .image-container {
+  position: relative;
+  width: 100%;
+}
+
+.about-col-1 .original-image {
+  width: 100%;
+  border-radius: 15px;
+  transition: opacity 0.5s;
+}
+
+.about-col-1 .gif-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.about-col-1 .image-container:hover .original-image {
+  opacity: 0;
+}
+
+.about-col-1 .image-container:hover .gif-image {
+  opacity: 1;
+}
+
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/*services*/
+#services {
+  padding: 30px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background-color: #ff004f;
+  transform: translateY(-10px);
+}
+
+/*portfolio*/
+#portfolio {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+  object-fit: contain;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #ff004f;
+}
+
+/*contact*/
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input, form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+/*responsive*/
+nav .fa-solid {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url(images/compu6.jpeg);
+  }
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
     top: 0;
-    z-index: 999;
-}
-
-h1 {
-    margin: 0;
-    color: white; /* Cambiar el color del texto a blanco */
-}
-
-/* Estilos para el navbar */
-.app-navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #333;
-    position: fixed; /* Fijar el navbar en la parte inferior */
-    bottom: 0;
-    left: 0; /* Asegurar que el navbar comience desde el borde izquierdo */
-    right: 0; /* Asegurar que el navbar termine en el borde derecho */
-    z-index: 999;
-}
-
-.app-navbar a {
-    margin: 0 1em;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    flex-grow: 1; /* Distribuir el espacio disponible de manera equitativa */
-    text-align: center; /* Centrar el texto en dispositivos móviles */
-}
-
-.app-navbar a:hover {
-    color: #99CC99; /* Cambio de color al pasar el ratón */
-}
-
-/* Estilos para el contenido de la lista de cócteles */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; /* Centrar el contenido de la lista */
-}
-
-li {
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
     cursor: pointer;
-    margin-bottom: 10px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-li:hover {
-    color: #99CC99; /* Cambio de color al pasar el ratón */
-}
-
-.cocktail-details {
-    display: none;
-    margin-top: 20px; /* Aumento del espacio entre los detalles de los cócteles */
-    text-align: center;
-}
-
-.cocktail-details img {
-    border-radius: 10px; /* Reducción del radio del borde */
-    max-width: 100%; /* Asegura que la imagen no supere el ancho del contenedor */
-    height: auto; /* Ajuste automático de la altura */
-}
-
-section {
-    padding-top: 110px; /* Ajustar el espacio para el contenido debajo del header y navbar */
-    padding-bottom: 60px; /* Ajustar el espacio para el contenido encima del footer */
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-    position: fixed; /* Fijar el footer en la parte inferior */
-    bottom: 0;
-}
-
-img {
-    width: 400px;
-}
-
-section.imagenes {
-    display: flex;
-    justify-content: center;
-
-}
-
-
-/* Ajustes para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem; /* Reducción del tamaño de fuente del encabezado en dispositivos móviles */
-    }
-    
-    .cocktail-details {
-        margin-top: 80px; /* Reducción del espacio superior en dispositivos móviles */
-    }
-
-    /* Ajustes para el navbar en dispositivos móviles */
-    .app-navbar {
-        display: flex;
-        flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
-        justify-content: space-around; /* Espacio uniforme entre los elementos */
-        width: 100%;
-        background-color: #333;
-        position: fixed;
-        bottom: 0;
-        z-index: 999;
-    }
-    
-    .app-navbar a {
-        margin: 0.5em; /* Espacio alrededor de cada elemento */
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        transition: color 0.3s ease;
-        width: 100%; /* Ocupar todo el ancho disponible */
-        text-align: center; /* Centrar el texto */
-    }
-
-    section {
-        padding-top: 80px; /* Ajustar el espacio para el contenido debajo del navbar */
-        padding-bottom: 50px; /* Ajustar el espacio para el contenido encima del footer */
-        margin-bottom: 50px; /* Ajustar margen inferior para dispositivos móviles */
-        position: relative; /* Establece el posicionamiento relativo para que los elementos absolutamente posicionados estén relativos a él */
-        display: block; /* Cambia el display a bloque para que las imágenes se muestren una encima de la otra */
-    
-    }
-    section.imagenes {
-        flex-direction: column; /* Coloca las imágenes una encima de la otra en dispositivos móviles */
-        align-items: center; /* Centra las imágenes verticalmente en dispositivos móviles */
-    }
-    .cocktail-details {
-        margin-top: 80px; /* Ajustar el espacio para los detalles del cóctel debajo del navbar */
-    }
-
-    img {
-        width: 300px;
-    }
-
-    img.pdf {
-        width: 100%; /* Establece el ancho al 100% para que las imágenes ocupen todo el ancho del contenedor */
-        height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
-        max-width: none; /* Elimina el límite máximo de ancho */
-        margin-bottom: 10px; /* Añade un espacio entre las imágenes */
-    }
+  }
+  .sub-title {
+    font-size: 40px;
+  }
+  .about-col-1, .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left, .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+  .text-con-fondo-oscuro {
+    width: 90%;
+  }
 }
